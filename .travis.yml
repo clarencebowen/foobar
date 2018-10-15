@@ -11,7 +11,7 @@ deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
   app: "foobarapp"
-  env: "Foobarapp-env"
+  env: "Foobarapp-env-2"
   bucket_name: "elasticbeanstalk-us-east-1-711552313519"
   bucket_path: "foobarapp"
   on:
