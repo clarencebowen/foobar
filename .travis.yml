@@ -6,3 +6,16 @@ before_install:
 
 script:
   - docker run mrcbo/foobar npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "foobarapp"
+  env: "Foobarapp-env"
+  bucket_name: "elasticbeanstalk-us-east-1-711552313519"
+  bucket_path: "foobarapp"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
